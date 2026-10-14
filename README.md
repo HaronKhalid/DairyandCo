@@ -1,104 +1,109 @@
-# Dairy & Co — Storefront
+# Dairy & Co — Fresh Milk & Yogurt Storefront
 
-Dairy & Co is a neighborhood dairy storefront based in Tench Bhatta, Rawalpindi. This website is a **100% static, fast, responsive, and SEO-optimized web application** featuring WhatsApp-based ordering, bilingual (English & Urdu) support, and live Google Maps integration.
+> **Freshness You Can Trust** — Your local neighborhood dairy storefront in Tench Bhatta, Rawalpindi.
 
----
-
-## 🚀 GitHub Pages Deployment
-
-This site is built with pure HTML, CSS, and client-side JavaScript. It requires **no server, no Python, and no Node.js** to deploy or run.
-
-### Quick Setup:
-1. Initialize git in this directory and commit:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit for Dairy & Co storefront"
-   ```
-2. Link your GitHub repository and push:
-   ```bash
-   git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-   git branch -M main
-   git push -u origin main
-   ```
-3. In your GitHub repository:
-   * Go to **Settings** → **Pages**.
-   * Under **Build and deployment**:
-     * **Source**: `Deploy from a branch`
-     * **Branch**: `main` / `/ (root)`
-   * Click **Save**.
+[![Website](https://img.shields.io/badge/Website-dairyandco.com-013090?style=flat-square&logo=google-chrome&logoColor=white)](https://dairyandco.com)
+[![Hosting](https://img.shields.io/badge/Hosting-GitHub_Pages-222222?style=flat-square&logo=github&logoColor=white)](https://haronkhalid.github.io/DairyandCo/)
+[![Tech](https://img.shields.io/badge/Stack-HTML5_|_Vanilla_CSS_|_JavaScript-F05032?style=flat-square)](https://dairyandco.com)
+[![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)]()
 
 ---
 
-## 🌐 Custom Domain (`dairyandco.com`)
+## 📖 Overview
 
-The repository already includes the required `CNAME` file configured for `dairyandco.com`.
+**Dairy & Co** is a fast, responsive, and privacy-focused digital storefront built for a local dairy business in Tench Bhatta, Rawalpindi. 
 
-### DNS Configuration:
-At your domain registrar (e.g. GoDaddy, Namecheap, Cloudflare, Google Domains), configure the following DNS records:
-
-1. **Apex Domain (`@`) — Add 4 GitHub Pages `A` records:**
-   * `185.199.108.153`
-   * `185.199.109.153`
-   * `185.199.110.153`
-   * `185.199.111.153`
-
-2. **Subdomain (`www`) — Add a `CNAME` record:**
-   * Host: `www`
-   * Target: `<your-username>.github.io`
-
-3. In GitHub repository **Settings** → **Pages**:
-   * Verify **Custom domain** displays `dairyandco.com`.
-   * Check **Enforce HTTPS** once the SSL certificate has provisioned.
+The site is designed for immediate client engagement through direct **WhatsApp order composition**, live **Google Maps location**, and dynamic **Pakistan Standard Time opening hours**, all without requiring expensive servers, databases, or third-party checkout commissions.
 
 ---
 
-## 💻 Local Preview (Optional)
+## ✨ Features
 
-You can preview the site locally anytime without any build step:
-* **Option A**: Double-click `index.html` to open directly in any browser.
-* **Option B**: Using Python's built-in simple server (no installation required):
-  ```bash
-  python -m http.server 3000
-  ```
-  Then open `http://localhost:3000`.
+- **🥛 Fresh Product Catalog**: Clear PKR pricing and size selection for:
+  - **Buffalo Milk** (*بھینس کا دودھ*) — Rs. 240 / liter · Rs. 120 / half-liter
+  - **Cow Milk** (*گائے کا دودھ*) — Rs. 220 / liter · Rs. 110 / half-liter
+  - **Fresh Yogurt** (*تازہ دہی*) — Rs. 260 / kg · Rs. 130 / half-kg
+- **💬 Direct WhatsApp Ordering**: Generates clean, prefilled WhatsApp order requests with selected quantities, price estimates, customer name, and delivery address.
+- **🌐 Bilingual Support (English & Urdu)**: Instant language switcher with right-to-left (RTL) layout and authentic *Noto Nastaliq Urdu* typography.
+- **📍 Live Interactive Google Map**: Embedded Google Map showcasing **Dairy&Co Milk Shop** in Raja Market (Merhbhan Market), Tench Bhatta with one-tap directions ([Google Maps Link](https://maps.app.goo.gl/4SAoBDi3jdb2F4UU9)).
+- **🕒 Dynamic Business Hours**: Daily morning and evening schedule with automatic current-day highlighting (Pakistan Standard Time / Asia:Karachi).
+- **🛒 Client-Side Basket**: Lightweight `localStorage` cart with real-time item counter and total calculations.
+- **⚡ 100% Static & Lightweight**: Zero frameworks, zero build steps, and instant load times.
+- **📱 Fully Responsive**: Tailored fluid typography and touch-optimized UI for mobile, tablet, and desktop devices.
+- **🔒 Privacy First**: No server tracking, no cookies, no personal data stored remotely.
 
 ---
 
 ## 📁 Repository Structure
 
 ```
-Dairy & Co/
-├── .gitignore            # Ignores OS, IDE, and temporary files
-├── .nojekyll             # Tells GitHub Pages to serve static files directly
-├── 404.html              # Custom branded 404 error page with auto-redirect
-├── CNAME                 # Custom domain file (dairyandco.com)
-├── README.md             # Project documentation and setup guide
-├── index.html            # Primary storefront page with Google Maps embed
-├── privacy.html          # Privacy Policy
-├── terms.html            # Terms & Conditions
-├── robots.txt            # Search engine crawler instructions
-├── sitemap.xml           # XML sitemap for SEO
-├── styles.css            # Responsive styles and design tokens
+DairyandCo/
+├── .gitignore            # Git exclusion rules (OS, IDE, temporary files)
+├── .nojekyll             # Ensures GitHub Pages serves static files directly
+├── 404.html              # Custom branded 404 page with clean URL redirect
+├── CNAME                 # Custom domain configuration (dairyandco.com)
+├── README.md             # Project documentation
+├── index.html            # Main landing page with live Google Maps embed
+├── privacy.html          # Starter Privacy Policy
+├── terms.html            # Starter Terms & Conditions
+├── robots.txt            # Search engine crawling rules
+├── sitemap.xml           # XML sitemap for search engines
+├── styles.css            # Custom responsive styles & typography design tokens
 ├── js/
-│   ├── app.js            # Client-side cart, Urdu/English toggle, & WhatsApp builder
-│   └── products.js       # Product catalog, PKR pricing, and business settings
+│   ├── app.js            # Basket management, language switcher, WhatsApp message builder
+│   └── products.js       # Product catalog, PKR pricing, store hours & Google Maps URL
 └── assets/
-    ├── brand-logo-transparent.png
-    ├── brand-logo-white.png
-    ├── hero-showcase.jpg
-    ├── story-shop.jpg
-    ├── product-buffalo-milk.jpg
-    ├── product-cow-milk.jpg
-    ├── product-fresh-yogurt.jpg
-    ├── share-card.svg
-    ├── favicon.png
-    └── favicon.svg
+    ├── brand-logo-transparent.png  # Brand logo (transparent background)
+    ├── brand-logo-white.png        # Brand logo (footer light variant)
+    ├── hero-showcase.jpg           # Hero section showcase photo
+    ├── story-shop.jpg              # Shop atmosphere photo
+    ├── product-buffalo-milk.jpg    # Buffalo milk showcase photo
+    ├── product-cow-milk.jpg        # Cow milk showcase photo
+    ├── product-fresh-yogurt.jpg    # Fresh yogurt showcase photo
+    ├── share-card.svg              # Social share card (Open Graph)
+    ├── favicon.png                 # Browser favicon (PNG)
+    └── favicon.svg                 # Browser favicon (SVG)
 ```
 
 ---
 
-## 📝 Updating Store Information
+## 🛠️ Configuration & Customization
 
-* **Products & Prices**: Edit catalog details, PKR prices, WhatsApp number, and store hours in [`js/products.js`](js/products.js).
-* **Text & Urdu Translations**: Edit page copy and bilingual strings in the `translations` object inside [`js/app.js`](js/app.js).
+All business data and prices can be customized directly without touching HTML templates:
+
+| Setting | Location | Description |
+| :--- | :--- | :--- |
+| **Products & Prices** | [`js/products.js`](js/products.js) | Edit variants, PKR rates, names, and descriptions |
+| **Opening Hours** | [`js/products.js`](js/products.js) | Configure session timings for each day of the week |
+| **Phone & WhatsApp** | [`js/products.js`](js/products.js) | Update WhatsApp contact number |
+| **Google Maps Link** | [`js/products.js`](js/products.js) | Update directions link and shop location |
+| **Urdu / English Copy** | [`js/app.js`](js/app.js) | Modify translations in the `translations` object |
+
+---
+
+## 💻 Local Preview
+
+You can run and test the website locally in two ways:
+
+1. **Directly**: Double-click `index.html` to open it in any web browser.
+2. **Local HTTP Server** (Python built-in):
+   ```bash
+   python -m http.server 3000
+   ```
+   Open `http://localhost:3000` in your browser.
+
+---
+
+## 📍 Store & Contact Details
+
+- **Store**: Dairy & Co Milk Shop
+- **Location**: Raja Market (Merhbhan Market), Tench Bhatta, Rawalpindi, Pakistan
+- **Phone / WhatsApp**: [+92 319 9446974](https://wa.me/923199446974)
+- **Website**: [dairyandco.com](https://dairyandco.com)
+- **Directions**: [Google Maps](https://maps.app.goo.gl/4SAoBDi3jdb2F4UU9)
+
+---
+
+## 📄 License & Rights
+
+© 2026 Dairy & Co. All rights reserved.
