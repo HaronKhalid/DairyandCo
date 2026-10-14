@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#013090">
+  <title>Page Not Found — Dairy &amp; Co</title>
+  <link rel="icon" href="assets/brand-logo-transparent.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Seamless fallback for clean URLs on GitHub Pages
+    (function() {
+      var path = window.location.pathname;
+      if (path.endsWith("/privacy") || path.endsWith("/privacy/")) {
+        window.location.replace("privacy.html");
+      } else if (path.endsWith("/terms") || path.endsWith("/terms/")) {
+        window.location.replace("terms.html");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="announcement"><span class="announcement-dot" aria-hidden="true"></span>Your neighbourhood dairy in Tench Bhatta, Rawalpindi</div>
+  <header class="site-header">
+    <div class="header-inner page-wrap">
+      <a class="brand" href="./">
+        <img class="brand-logo" src="assets/brand-logo-transparent.png" alt="Dairy &amp; Co Logo" width="58" height="42">
+        <span class="brand-copy"><strong>Dairy <span>&amp;</span> Co</strong><small>FRESHNESS YOU CAN TRUST</small></span>
+      </a>
+      <a class="button button-quiet" href="./">← Back to home</a>
+    </div>
+  </header>
+  <main id="main-content" class="policy-page page-wrap" style="text-align:center;padding-block:90px;">
+    <span class="eyebrow"><span class="eyebrow-mark" aria-hidden="true">✳</span>ERROR 404</span>
+    <h1 style="font-size:clamp(38px,6vw,56px);margin:16px 0 12px;">Page Not Found</h1>
+    <p class="policy-lead" style="margin:0 auto 28px;max-width:540px;">The page you are looking for does not exist or may have moved.</p>
+    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+      <a class="button button-primary" href="./">Return to Dairy &amp; Co</a>
+      <a class="button button-quiet" href="https://wa.me/923199446974" target="_blank" rel="noopener noreferrer">Contact on WhatsApp ↗</a>
+    </div>
+  </main>
+  <footer class="policy-footer">
+    <div class="page-wrap">
+      <span>© 2026 Dairy &amp; Co. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></span>
+    </div>
+  </footer>
+</body>
+</html>
